@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-gothic: 'Cinzel', serif;
+    --font-vintage: 'Cormorant Garamond', Georgia, serif;
+    --font-ui: 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+.font-gothic {
+  font-family: 'Cinzel', serif;
+}
+
+.font-vintage {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-ui {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+@keyframes candle-flicker {
+  0%, 100% { opacity: 0.92; filter: drop-shadow(0 0 16px rgba(251, 146, 60, 0.45)); }
+  25% { opacity: 0.82; filter: drop-shadow(0 0 10px rgba(251, 146, 60, 0.3)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 22px rgba(251, 146, 60, 0.6)); }
+  75% { opacity: 0.88; filter: drop-shadow(0 0 14px rgba(251, 146, 60, 0.38)); }
+}
+
+.animate-candle {
+  animation: candle-flicker 3s infinite ease-in-out;
+}
+
+@keyframes pendulum-swing {
+  0% { transform: rotate(-14deg); }
+  50% { transform: rotate(14deg); }
+  100% { transform: rotate(-14deg); }
+}
+
+.animate-pendulum {
+  transform-origin: top center;
+  animation: pendulum-swing 2s infinite ease-in-out;
+}
+
+@keyframes flame-dance {
+  0%, 100% { transform: scale(1) translateY(0); filter: brightness(1); }
+  25% { transform: scale(1.08, 0.95) translateY(-2px); filter: brightness(1.2); }
+  50% { transform: scale(0.95, 1.05) translateY(1px); filter: brightness(0.9); }
+  75% { transform: scale(1.05, 0.98) translateY(-1px); filter: brightness(1.15); }
+}
+
+.animate-flame {
+  animation: flame-dance 1.4s infinite ease-in-out;
+}
+
+@keyframes pulse-ghostly {
+  0%, 100% { opacity: 0.35; transform: scale(1) translateY(0); }
+  50% { opacity: 0.85; transform: scale(1.03) translateY(-4px); }
+}
+
+.animate-ghostly {
+  animation: pulse-ghostly 3.5s infinite ease-in-out;
+}
+
+/* Custom gothic scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #110f17;
+}
+::-webkit-scrollbar-thumb {
+  background: #393046;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #5d4f73;
+}

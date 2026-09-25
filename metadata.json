@@ -1,0 +1,6 @@
+{
+  "name": "O Segredo da Mansão Ravenwood",
+  "description": "Jogo point-and-click de terror psicológico e mistério gótico vitoriano com puzzles profundos, trilha sonora orquestral de piano e um plot twist emocionante.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
